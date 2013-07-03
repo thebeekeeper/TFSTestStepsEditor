@@ -40,24 +40,29 @@ namespace TestStepsEditor
 			Shown += (
 				(o, e) =>
 				{
-					try
-					{
-						_testStateToolStripLabel.Text = "Connecting...";
-						ApplyUserServerPreferences();
-						_testStateToolStripLabel.Text = "Connected.";
-
-						_workItemIdToolStripComboBox.Focus();
-						_toolStripContainer.Enabled = true;
-					}
-					catch (Exception ex)
-					{
-						_toolStripContainer.Enabled = true;
-
-						MessageBox.Show("Could not load previous TFS connection.\n\nError:\n" + ex.Message, "Error Restoring Previous Connection");
-						_changeProjectToolStripButton.Text = "(not connected)";
-					}
+                    OnWindowShown();
 				});
 		}
+
+        public void OnWindowShown()
+        {
+            try
+            {
+                _testStateToolStripLabel.Text = "Connecting...";
+                ApplyUserServerPreferences();
+                _testStateToolStripLabel.Text = "Connected.";
+
+                _workItemIdToolStripComboBox.Focus();
+                _toolStripContainer.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                _toolStripContainer.Enabled = true;
+
+                MessageBox.Show("Could not load previous TFS connection.\n\nError:\n" + ex.Message, "Error Restoring Previous Connection");
+                _changeProjectToolStripButton.Text = "(not connected)";
+            }
+        }
 
 		private void ApplyUserServerPreferences()
 		{
