@@ -50,13 +50,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\TestStepsEditor.VsExtension\TestStepsEditor.VsExtension.csproj">
+    <ProjectReference Include="..\TestStepsEditor.VsExtension\TestStepsEditor.VsExtension.csproj">
       <Project>{1D705FA7-65C2-49A0-869D-B68CB159DBF8}</Project>
       <Name>TestStepsEditor.VsExtension</Name>
       <IncludeOutputGroupsInVSIX>VSIXContainerProjectOutputGroup%3bBuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3bPkgdefProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
-    <ProjectReference Include="..\TestStepsEditor.csproj">
+    <ProjectReference Include="..\TestStepsEditor\TestStepsEditor.csproj">
       <Project>{18659412-05A2-4C21-8365-0C8385963FE4}</Project>
       <Name>TestStepsEditor</Name>
       <IncludeOutputGroupsInVSIX>VSIXContainerProjectOutputGroup%3bBuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>

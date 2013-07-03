@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B08489
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestStepsEditor.VsExtension", "..\TestStepsEditor.VsExtension\TestStepsEditor.VsExtension.csproj", "{1D705FA7-65C2-49A0-869D-B68CB159DBF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestStepsEditor.Vsix", "TestStepsEditor.Vsix\TestStepsEditor.Vsix.csproj", "{71C5F70A-819A-4E26-851E-21918EC50DBF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestStepsEditor.Vsix", "..\TestStepsEditor.Vsix\TestStepsEditor.Vsix.csproj", "{71C5F70A-819A-4E26-851E-21918EC50DBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
