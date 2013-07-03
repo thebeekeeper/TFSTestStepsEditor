@@ -217,4 +217,24 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <!--
+    ============================================================
+             VSIXContainerProjectOutputGroup
+
+      Used for determining the VSIX Container that this project
+      builds from other projects that reference it.
+    ============================================================
+    -->
+  <Target Name="VSIXContainerProjectOutputGroup"
+          Outputs="@(VSIXContainerOutputGroupOutput)"
+          DependsOnTargets="$(VSIXContainerProjectOutputGroupDependsOn)">
+
+    <ItemGroup Condition="'$(CreateVsixContainer)'=='true'">
+      <_VSIXContainerOutputGroupOutput Include="$(TargetVsixContainer)" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(CreateVsixContainer)'=='true'">
+      <VSIXContainerOutputGroupOutput Include="@(_VSIXContainerOutputGroupOutput->'%(FullPath)')" />
+    </ItemGroup>
+  </Target>
 </Project>
